@@ -1,0 +1,152 @@
+body {
+  font-family: 'Source Sans Pro';
+  background: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+h3 {
+  margin-bottom: 3rem;
+}
+
+.logo {
+  text-align: center;
+}
+
+input, select {
+  width: 250px;
+  height: 40px;
+  background-color: #141c24;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+select:first-child,
+select:last-child {
+  color: #ffffff50;
+}
+
+select:valid{
+  color: #fff;
+}
+
+select:disabled{
+  color: #ffffff50;
+}
+
+input::placeholder, select::placeholder{
+  color: #ffffff50;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.do-game-list img {
+  width: 50px;
+}
+
+
+.button-list {
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+  width: 150px;
+  background-color: #141c24;
+  color: #fff;
+  font-weight: 700;
+}
+
+.button-list:hover {
+  color: #fff;
+  background-color: #23384b;
+}
+
+hr {
+  border-top: 1px dotted #ffffff;
+  width: 80%;
+}
+
+.clear-storage {
+  border: none;
+  padding: 0.5rem;
+  width: 200px;
+  margin-top: 1rem;
+  background-color: #821e30;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
+
+.error {
+  border: 2px solid #821e30;
+}
+
+#videogame-error {
+  color: #fff;
+  font-weight: 700;
+  height: 2rem;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #8F2132;
+}
+
+button:last-child{
+  border: none;
+  padding: 0.2rem 0.5rem;
+  background-color: #8F2132;
+  color: #fff;
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+  margin-top: 1rem;
+}
+
+table td, table th {
+  border: 1px solid #23384b;
+}
+
+table td {
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+table td:first-child {
+  font-weight: 700;
+}
+
+table tr {
+  text-align: center;
+}
+
+table th {
+  text-align: center;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: #141c24;
+}
+
+table th:first-child{
+  width: 200px;
+}
+
+table th:nth-child(2),
+table th:last-child {
+  width: 85px;
+}
+
+table th:nth-child(3),
+table th:nth-child(4) {
+  width: 160px;
+}
