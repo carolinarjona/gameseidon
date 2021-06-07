@@ -25,6 +25,14 @@ document.querySelector("select").onclick = () => {
   resetColors();
 };
 
+document
+  .querySelector("table")
+  .addEventListener("click", async ({ target }) => {
+    if (target.tagName == "BUTTON") {
+      await deleteVideogame(target.parentNode.parentNode.id);
+    }
+  });
+
 //Functions
 const submitVideogame = async () => {
   if (
@@ -104,6 +112,17 @@ const loadVideogames = async () => {
     });
 };
 
+async function deleteVideogame(id) {
+  await fetch(`http://localhost:3000/videogames/${id}`, {
+    method: "DELETE",
+    body: null,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  document.getElementById(id).remove();
+}
+
 const paintAllVideogames = (json) => {
   clearList();
   json.forEach((videogame) => {
@@ -112,7 +131,7 @@ const paintAllVideogames = (json) => {
         <td>${videogame.price} €</td>
         <td>${Videogame.getVideogamegameConsole(+videogame.console)}</td>
         <td>${Videogame.getVideogameGenre(+videogame.genre)}</td>
-        <td><button onclick="deleteVideogame('${videogame.id}')">X</button></td>
+        <td><button>X</button></td>
         </tr>`;
   });
 };
